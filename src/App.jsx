@@ -5,8 +5,14 @@ import Main from "./component/Main/Main";
 import Form from "./component/Form/Form";
 
 function App() {
+  const arr = [{
+      id: 1,
+      checked: true,
+      item: "welcome"
+  }];
+  
   const [ lists, setList ] = useState(
-    JSON.parse(localStorage.getItem("list"))
+    arr.concat(JSON.parse(localStorage.getItem("list")))
   );
 
   const [ newItem, setNewItem ] = useState("");
