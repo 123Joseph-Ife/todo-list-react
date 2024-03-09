@@ -12,7 +12,7 @@ function App() {
       item: "welcome"
     }]
     localStorage.setItem("list", listItems)
-  }
+  } 
 
   arr();
   
