@@ -5,14 +5,19 @@ import Main from "./component/Main/Main";
 import Form from "./component/Form/Form";
 
 function App() {
-  const arr = [{
+  const arr = () => {
+    const listItems = [{
       id: 1,
       checked: true,
       item: "welcome"
-  }];
+    }]
+    localStorage.setItem("list", listItems)
+  }
+
+  arr();
   
   const [ lists, setList ] = useState(
-    arr.concat(JSON.parse(localStorage.getItem("list")))
+    JSON.parse(localStorage.getItem("list")))
   );
 
   const [ newItem, setNewItem ] = useState("");
