@@ -1,0 +1,119 @@
+:root {
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin-bottom: 30px;
+}
+
+header img {
+  cursor: pointer;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+}
+
+.form .circle-container {
+  background-color: hsl(235, 24%, 19%);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+  /* position: absolute; */
+}
+
+.input {
+  width: 100%;
+  padding: 20px;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  outline: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin-top: 20px;
+  background-color: hsl(235, 24%, 19%);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  border-bottom: 2px solid hsl(237, 14%, 26%);
+}
+
+.list:last-of-type {
+  border-bottom: none;
+}
+
+.main .circle, .img-container:hover {
+  cursor: pointer;
+}
+
+.main .circle-container {
+  position: relative;
+}
+
+.main .circle-container .img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsl(237, 14%, 26%);;
+  border-radius: 50%;
+}
+
+.delete {
+  background: none;
+  border: none;
+  opacity: 0;
+}
+
+.list:hover .delete {
+  opacity: 1;
+}
+
+.check {
+  display: none;
+}
+
+.text {
+  -webkit-column-break-inside: auto ;
+}
+
+@media (max-width: 850px) {
+  header, .main {
+    width: 80vw;
+  }
+}
