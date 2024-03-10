@@ -9,8 +9,9 @@ const Form = ({ handleSubmit, newItem, setNewItem }) => {
         </div>
       </div>
       <input 
+        required
         type="text" className="input" 
-        placeholder="Create new todo..." 
+        placeholder="Create new todo..."
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
       />
