@@ -5,12 +5,8 @@ import Main from "./component/Main/Main";
 import Form from "./component/Form/Form";
 
 function App() {
-   const [ lists, setList ] = useState(JSON.parse(localStorage.getItem("list")) || []);
+  const [ lists, setList ] = useState(JSON.parse(localStorage.getItem("list")) || []);
   
-  const [ lists, setList ] = useState(
-    JSON.parse(localStorage.getItem("list")))
-  );
-
   const [ newItem, setNewItem ] = useState("");
   const [ background, setBackground ] = useState("sun")
 
