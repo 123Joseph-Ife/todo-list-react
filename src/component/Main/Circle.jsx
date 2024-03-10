@@ -12,9 +12,7 @@ const Circle = ({ list, handleCheck }) => {
           list.checked === false ? { display: "none" } : { display: "flex" }
         }
       >
-        <img
-          src="src\assets\images\icon-check.svg"
-        />
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
       </div>
     </div>
   );
