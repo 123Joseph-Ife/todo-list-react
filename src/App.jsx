@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './component/components.css';
 import Header from "./component/Header/Header";
 import Main from "./component/Main/Main";
@@ -6,7 +6,12 @@ import Form from "./component/Form/Form";
 
 function App() {
   const [ lists, setList ] = useState(JSON.parse(localStorage.getItem("list")) || []);
-  
+
+
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(lists))
+  }, [lists])
+
   const [ newItem, setNewItem ] = useState("");
   const [ background, setBackground ] = useState("sun")
 
@@ -14,15 +19,12 @@ function App() {
     const listItems = lists.map((list) => (
       list.id === id ? { ...list, checked: !list.checked } : list
     ));
-    console.log(listItems);
     setList(listItems)
-    localStorage.setItem("list", JSON.stringify(listItems))
   }
 
   const handleDelete = (id) => {
     const listItems = lists.filter((list) => list.id !== id);
     setList(listItems)
-    localStorage.setItem("list", JSON.stringify(listItems));
   }
 
   const addItem = (item) => {
@@ -33,7 +35,6 @@ function App() {
       item: item
     }]
     setList(listItems)
-    localStorage.setItem("list", JSON.stringify(listItems))
   }
 
   const handleSubmit = (e) => {
