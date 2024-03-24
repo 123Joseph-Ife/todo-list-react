@@ -24,6 +24,8 @@ body {
   background: 
       url(assets/images/bg-desktop-dark.jpg),
       linear-gradient(hsl(234, 39%, 85%), hsl(234, 39%, 85%));
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h1 {
