@@ -8,7 +8,7 @@ const Header = ({ background, setBackground }) => {
       <h1>Todo</h1>
       <div id="images" className={background === "sun" ? "moon" : "sun"} onClick={() => {
           background === "sun" ? setBackground("moon") : setBackground("sun");
-        }}>
+        }}> 
         {
           background === "sun" ?
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
