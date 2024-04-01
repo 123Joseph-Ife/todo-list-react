@@ -1,7 +1,3 @@
-import sunLogo from "src/assets/images/icon-sun.svg"
-import DarkLogo from "src/assets/images/icon-moon.svg"
-
-
 const Header = ({ background, setBackground }) => {
   return (
     <header>
