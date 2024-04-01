@@ -8,7 +8,7 @@ const Header = ({ background, setBackground }) => {
       <h1>Todo</h1>
       <img 
         id="images"
-        src={sunLogo} 
+        src="src/assets/images/icon-sun.svg" 
         onClick={() => {
           background === "sun" ? setBackground("moon") : setBackground("sun");
         }}
