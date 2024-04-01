@@ -8,14 +8,15 @@ header {
   align-items: center;
   width: 60vw;
   margin-bottom: 30px;
+  color: hsl(0, 0%, 98%);
 }
 
-header .div {
+header img {
   cursor: pointer;
 }
 
 .form {
-  width: 100%;
+  width: 60vw;
   display: flex;
 }
 
@@ -25,6 +26,12 @@ header .div {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+}
+
+.light .form .circle-container {
+  background-color: hsl(0, 0%, 98%);
 }
 
 .form .circle {
@@ -41,6 +48,12 @@ header .div {
   background-color: hsl(235, 24%, 19%);
   border: none;
   outline: none;
+  color: white;
+}
+
+.light .input {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 24%, 19%);
 }
 
 .main {
@@ -53,13 +66,26 @@ header .div {
   background-color: hsl(235, 24%, 19%);
 }
 
+.light .main {
+  background-color: hsl(0, 0%, 98%);
+}
+
 .list {
   display: flex;
   justify-content: space-between;
+  word-break: break-all;
   align-items: center;
   width: 100%;
   padding: 0 20px;
   border-bottom: 2px solid hsl(237, 14%, 26%);
+}
+
+
+.list p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list:last-of-type {
@@ -92,12 +118,17 @@ header .div {
   height: 30px;
   border: 2px solid hsl(237, 14%, 26%);;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 .delete {
   background: none;
   border: none;
   opacity: 0;
+  color: hsl(237, 13%, 27%);
+  font-size: 1.5rem;
+  padding-left: 10px;
+  /* width: 3px; */
 }
 
 .list:hover .delete {
@@ -109,11 +140,15 @@ header .div {
 }
 
 .text {
-  -webkit-column-break-inside: auto ;
+  -webkit-column-break-inside: auto;
 }
 
 @media (max-width: 850px) {
-  header, .main {
+  header, .main, .form {
     width: 80vw;
+  }
+
+  .delete {
+    opacity: 1;
   }
 }
