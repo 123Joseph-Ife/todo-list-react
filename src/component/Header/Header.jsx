@@ -1,10 +1,14 @@
+import BrightLogo from "src/assets/images/icon-sun.svg"
+import DarkLogo from "src/assets/images/icon-moon.svg"
+
+
 const Header = ({ background, setBackground }) => {
   return (
     <header>
       <h1>Todo</h1>
       <img 
         id="images"
-        src={background === "sun" ? "src/assets/images/icon-sun.svg" : "src/assets/images/icon-moon.svg"} 
+        src={background === "sun" ? BrightLogo : DarkLogo } 
         onClick={() => {
           background === "sun" ? setBackground("moon") : setBackground("sun");
         }}
