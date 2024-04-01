@@ -13,16 +13,35 @@
   box-sizing: border-box;
 }
 
-body {
+.light {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  color: #000;
   min-height: 100vh;
   background: none;
-  color: #000;
   background: url(assets/images/bg-desktop-dark.jpg),
     linear-gradient(hsl(234, 39%, 85%), hsl(234, 39%, 85%));
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+  background: none;
+  color: rgba(255, 255, 255, 0.87);
+  background: url(assets/images/bg-desktop-dark.jpg),
+    linear-gradient(hsl(235, 21%, 11%), hsl(235, 21%, 11%));
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h1 {
@@ -31,11 +50,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: inherit;
+  padding: 1rem 0;
   cursor: pointer;
 }
 
@@ -43,37 +58,20 @@ li {
   list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: rgba(255, 255, 255, 0.87);
-    background: url(assets/images/bg-desktop-dark.jpg),
-      linear-gradient(hsl(235, 21%, 11%), hsl(235, 21%, 11%));
+@media (max-width: 850px) {
+  .light {
+    color: #000;
+    background: url(assets/images/bg-mobile-dark.jpg),
+      linear-gradient(hsl(234, 39%, 85%), hsl(234, 39%, 85%));
     background-repeat: no-repeat;
     background-size: contain;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 
-@media (max-width: 850px) {
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: url(assets/images/bg-mobile-dark.jpg),
-        linear-gradient(hsl(235, 21%, 11%), hsl(235, 21%, 11%));
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    body {
-      background: url(assets/images/bg-mobile-dark.jpg),
-        linear-gradient(hsl(234, 39%, 85%), hsl(234, 39%, 85%));
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+  .dark {
+    color: hsl(0, 0%, 98%);
+    background: url(assets/images/bg-mobile-dark.jpg),
+      linear-gradient(hsl(235, 21%, 11%), hsl(235, 21%, 11%));
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
